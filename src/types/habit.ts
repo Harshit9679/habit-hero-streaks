@@ -1,7 +1,7 @@
 export interface Habit {
   id: string;
   name: string;
-  description?: string;
+  description: string;
   color: string;
   datesCompleted: string[];
   createdAt: string;
@@ -15,16 +15,7 @@ export interface Badge {
   description: string;
   icon: string;
   requirement: number;
-  type: 'streak' | 'completion' | 'milestone';
+  type: 'completion' | 'streak' | 'milestone';
   earned: boolean;
   dateEarned?: string;
-}
-
-export interface User {
-  id: string;
-  email: string;
-  name: string;
-  totalHabitsCompleted: number;
-  badges: Badge[];
-  joinedAt: string;
 }
